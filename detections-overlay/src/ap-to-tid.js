@@ -5,6 +5,7 @@
 const fetch = require('node-fetch');
 const fs = require('fs');
 const commandLineArgs = require('command-line-args');
+const detectionNameMap = require('../data-sources/detection-map.json');
 
 const optionDefinitions = [
     { name: 'att', type: String, multiple: false },
@@ -79,6 +80,7 @@ async function main() {
         ob.techniqueID = eADict[`attack-pattern--${ob.attackid}`];
         ob.coveragescore *= 100;
         ob['attack-pattern'] = `attack-pattern--${ob.attackid}`;
+        ob.detectionName = detectionNameMap[ob.uuid];
         return ob;
     });
     console.log(output);

@@ -1,0 +1,43 @@
+{
+  "name": "detections-overlay",
+  "version": "1.0.0",
+  "description": "This enables a security team to create att&ck navigator 3.0 layers both for external parties, such as csuite, and for internal use.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha src/*.spec.js --watch",
+    "lint": "eslint src/*.js",
+    "nodemon": "nodemon"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 2019,
+      "env": {
+        "node": true,
+        "mocha": true
+      }
+    },
+    "extends": "airbnb-base",
+    "rules": {
+      "indent": [
+        "error",
+        4
+      ]
+    }
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^2.5.0",
+    "mocha": "^7.2.0"
+  },
+  "dependencies": {
+    "command-line-args": "^5.1.1",
+    "node-fetch": "^2.6.0",
+    "nodemon": "^2.0.4"
+  }
+}

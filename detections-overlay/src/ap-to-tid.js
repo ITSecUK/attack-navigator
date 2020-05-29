@@ -1,3 +1,5 @@
+/* eslint-disable no-param-reassign */
+/* eslint-disable no-console */
 /* eslint-disable prefer-destructuring */
 // update list of attack patterns to get the corresponding Technique ID
 const fetch = require('node-fetch');
@@ -74,8 +76,9 @@ async function main() {
     }
 
     const output = sourceArray.map((ob) => {
-        // eslint-disable-next-line no-param-reassign
-        ob.techniqueID = eADict[ob['attack-id']];
+        ob.techniqueID = eADict[`attack-pattern--${ob.attackid}`];
+        ob.coveragescore *= 100;
+        ob['attack-pattern'] = `attack-pattern--${ob.attackid}`;
         return ob;
     });
     console.log(output);
@@ -89,6 +92,3 @@ if (typeof require !== 'undefined' && require.main === module) {
     options = commandLineArgs(optionDefinitions);
     main();
 }
-
-
-

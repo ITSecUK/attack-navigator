@@ -1,0 +1,44 @@
+{
+    "description": "An auto-generated layer",
+    "version": "3.0",
+    "name": "IDS",
+    "domain": "mitre-enterprise",
+    "techniques": [
+        {
+            "score": 80,
+            "techniqueID": "T1189",
+            "metadata": [
+                {
+                    "name": "IDS: My Good Detection",
+                    "value": "80"
+                },
+                {
+                    "name": "Alerts",
+                    "value": "500"
+                },
+                {
+                    "name": "Detections",
+                    "value": "4"
+                },
+                {
+                    "name": "Missed Detections",
+                    "value": "1"
+                },
+                {
+                    "name": "Open Tickets",
+                    "value": "1"
+                },
+                {
+                    "name": "Closed Tickets",
+                    "value": "0"
+                }
+            ]
+        }
+    ],
+    "legendItems": [
+        {
+            "label": "example label",
+            "color": "#ff6666"
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "name": "Att&ck Detections Mapper Example",
+    "version": 0.1,
+    "detections": [
+        {
+            "source": "IDS",
+            "id": "1234",
+            "name": "my good detection",
+            "technique": "T1189",
+            "confidence": 100
+        }
+    ]
+}
